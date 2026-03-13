@@ -8,4 +8,4 @@ En consola aparece algo como: Servidor corriendo en puerto 4000
 
 ## Capturas del sistema
 
-![Login](img/login.png)
+![Login](img/Login.png)

@@ -10,4 +10,4 @@ Luego abrir en el navegador:
 
 ## Capturas del sistema
 
-![Login](img/Login.png)
+![Login](app/public/img/Login.png)

@@ -2,10 +2,12 @@
 
 Este proyecto es un sistema web para la gestión de información del sindicato.
 
-Para correrlo en la consola de vscode poner: npm run dev y en tu navegador poner localhost:4000 
+Para correrlo en la consola de vscode poner:  
+`npm run dev`
 
-En consola aparece algo como: Servidor corriendo en puerto 4000
+Luego abrir en el navegador:  
+`http://localhost:4000`
 
 ## Capturas del sistema
 
-![Login](img/Login.png)
+![Login](app/public/img/Login.png)

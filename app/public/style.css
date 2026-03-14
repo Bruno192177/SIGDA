@@ -1,0 +1,118 @@
+html {
+  --s: 180px; /* control the size*/
+  --c1: #121212;
+  --c2: #616161;
+  --c3: #d11515;
+  
+  background:
+    repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
+     calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
+    repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
+  background-size: var(--s) calc(var(--s)*tan(30deg));
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    font-size: medium;
+}
+
+/* Para la página de admin, quitar centrado para que el calendario ocupe más espacio */
+.admin-page {
+    display: block !important;
+    justify-content: unset !important;
+    align-items: unset !important;
+    min-height: unset !important;
+    padding: 20px;
+}
+
+.admin-page main {
+    max-width: none;
+    width: 100%;
+}
+
+/* Contenedor superior en admin ocupa todo el ancho */
+.admin-page .form-container {
+    width: 100% !important;
+    max-width: none !important;
+    text-align: center; /* Centrar el contenido interno */
+}
+
+div{
+    text-align: center;
+}
+
+.logo{
+    width: 180px;
+    height: auto;
+}
+
+.form-container{
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form p {
+    text-align: center;
+}
+
+input, button{
+    border-radius: 4px;
+    border: unset;
+    padding: 15px 30px;
+    font-size: medium;
+}
+
+button{
+    background-color: #616161;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.error{
+    color: rgb(255, 81, 81);
+}
+
+.escondido{
+    display: none;
+}
+
+.sr-only{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Estilos para el calendario */
+#calendar {
+    width: 100%;
+    max-width: 1000px; /* Tamaño moderado */
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 16px; /* Tamaño de fuente cómodo */
+}
+
+/* Contenedor del botón de logout */
+.logout-container {
+    text-align: center;
+    margin: 40px 0;
+}

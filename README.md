@@ -10,7 +10,7 @@ Luego abrir en el navegador:
 
 
 credenciales:
-user: demo
+user: demo ////
 contraseña: demo
 
 

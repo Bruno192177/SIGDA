@@ -8,6 +8,14 @@ Para correrlo en la consola de vscode poner:
 Luego abrir en el navegador:  
 `http://localhost:4000`
 
+
+credenciales:
+user: demo ////
+contraseña: demo
+
+
+Para añadir un evento al calendario - dar click en día deseado
+
 ## Capturas del sistema
 
 ![Login](app/public/img/Login.png)

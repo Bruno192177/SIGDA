@@ -21,6 +21,27 @@ body {
     font-size: medium;
 }
 
+/* Para la página de admin, quitar centrado para que el calendario ocupe más espacio */
+.admin-page {
+    display: block !important;
+    justify-content: unset !important;
+    align-items: unset !important;
+    min-height: unset !important;
+    padding: 20px;
+}
+
+.admin-page main {
+    max-width: none;
+    width: 100%;
+}
+
+/* Contenedor superior en admin ocupa todo el ancho */
+.admin-page .form-container {
+    width: 100% !important;
+    max-width: none !important;
+    text-align: center; /* Centrar el contenido interno */
+}
+
 div{
     text-align: center;
 }
@@ -76,4 +97,22 @@ button{
     width: 1px;
     height: 1px;
     overflow: hidden;
+}
+
+/* Estilos para el calendario */
+#calendar {
+    width: 100%;
+    max-width: 1000px; /* Tamaño moderado */
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 16px; /* Tamaño de fuente cómodo */
+}
+
+/* Contenedor del botón de logout */
+.logout-container {
+    text-align: center;
+    margin: 40px 0;
 }

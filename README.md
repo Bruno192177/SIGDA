@@ -19,3 +19,9 @@ Para añadir un evento al calendario - dar click en día deseado
 ## Capturas del sistema
 
 ![Login](app/public/img/Login.png)
+
+![Panel-admin](app/public/img/Panel-admin.png)
+
+![Documentos](app/public/img/Documentos.png)
+
+![Cerrar-sesion](app/public/img/Cerrar-sesion.png)

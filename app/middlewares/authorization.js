@@ -18,25 +18,31 @@ async function soloPublico(req, res, next){
 
 async function revisarCookie(req){
     try{
-        const cookieJWT = req.headers.cookie.split("; ").find(cookie => cookie.startsWith("jwt=")).slice(4);
-        const decodificada = jsonwebtoken.verify(cookieJWT,process.env.JWT_SECRET);
-        console.log(decodificada)
-        
+        const cookieJWT = req.headers.cookie
+            .split("; ")
+            .find(cookie => cookie.startsWith("jwt="))
+            .slice(4);
+
+        const decodificada = jsonwebtoken.verify(cookieJWT, process.env.JWT_SECRET);
+
         const db = await conectarDB();
         const usuarioARevisar = await db.get(
             "SELECT * FROM usuarios WHERE user = ?",
             decodificada.user
         );
-        console.log("Usuario verificado:", usuarioARevisar)
-        
+
         if(!usuarioARevisar){
-            return false
+            return false;
         }
+
+        // guardar usuario en request
+        req.user = usuarioARevisar;
+
         return true;
-    }  
-    catch{
+
+    } catch {
         return false;
-    } 
+    }
 }
 
 

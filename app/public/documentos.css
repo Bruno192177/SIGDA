@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* LAYOUT GENERAL */
+.admin-layout {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #38bdf8;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f8fafc;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* USER DROPDOWN */
+.user-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+#username {
+    font-weight: bold;
+}
+
+/* menú oculto */
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 10px;
+    width: 200px;
+    display: none;
+    z-index: 100;
+}
+
+/* mostrar */
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.dropdown-menu hr {
+    margin: 10px 0;
+}
+
+/* botón logout dentro */
+.dropdown-menu button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #ef4444;
+    text-align: left;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+    background: #f3f4f6;
+}
+
+/* CONTENIDO */
+.content {
+    background: #f1f5f9;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+#upload-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+#file-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+}
+
+#upload-form button {
+    padding: 10px 15px;
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#upload-form button:hover {
+    background-color: #334155;
+}
+
+#docs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#docs-table thead {
+    background-color: #1e293b;
+    color: white;
+}
+
+#docs-table th,
+#docs-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+#docs-table tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+#docs-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+#docs-table a {
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+#docs-table button {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#docs-table button:hover {
+    background-color: #b91c1c;
+}
+
+.content h2 {
+    margin-bottom: 10px;
+    color: #1e293b;
+}

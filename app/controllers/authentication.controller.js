@@ -50,12 +50,14 @@ async function login(req, res){
     );
 
     const cookieOption = {
-        expires: new Date(
-            Date.now() +
-            process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000
-        ),
-        path: "/"
-    }
+    expires: new Date(
+        Date.now() +
+        process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000
+    ),
+        path: "/",
+        httpOnly: true,   // evita acceso desde JS
+        sameSite: "lax"
+    };
 
     res.cookie("jwt",token,cookieOption);
 

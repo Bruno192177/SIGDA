@@ -20,6 +20,15 @@ CREATE TABLE IF NOT EXISTS eventos (
 )
 `);
 
+await db.exec(`
+CREATE TABLE IF NOT EXISTS documentos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT,
+    ruta TEXT,
+    fecha TEXT
+)
+`);
+
 await db.run(`
 INSERT OR IGNORE INTO usuarios (user,password)
 VALUES ('demo','demo')

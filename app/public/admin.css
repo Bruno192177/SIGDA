@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* LAYOUT GENERAL */
+.admin-layout {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #38bdf8;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f8fafc;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* USER DROPDOWN */
+.user-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+#username {
+    font-weight: bold;
+}
+
+/* menú oculto */
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 10px;
+    width: 200px;
+    display: none;
+    z-index: 100;
+}
+
+/* mostrar */
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.dropdown-menu hr {
+    margin: 10px 0;
+}
+
+/* botón logout dentro */
+.dropdown-menu button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #ef4444;
+    text-align: left;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+    background: #f3f4f6;
+}
+
+/* CONTENIDO */
+.content {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* CALENDARIO */
+#calendar {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+

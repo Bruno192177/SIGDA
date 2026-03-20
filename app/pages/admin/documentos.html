@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentos</title>
+
+    <link rel="stylesheet" href="documentos.css">
+    <script src="documentos.js" defer></script>
+</head>
+
+<body class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">SIGDA</h2>
+        <nav>
+            <ul>
+                <li><a href="/admin">📅 Calendario</a></li>
+                <li><a href="/documentos">📁 Documentos</a></li>
+                <li><a href="#">👥 Padron</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <div class="main-content">
+
+        <header class="navbar">
+            <h1>Documentos</h1>
+
+            <div class="user-menu">
+    <div class="user-dropdown">
+
+        <span id="username">Usuario ▾</span>
+
+        <div class="dropdown-menu" id="dropdown">
+            <p id="user-name">Usuario</p>
+            <hr>
+            <button id="logout-btn">Cerrar sesión</button>
+        </div>
+
+    </div>
+</div>
+        </header>
+
+        <section class="content">
+
+            <h2>Subir documento</h2>
+
+            <form id="upload-form">
+                <input type="file" id="file-input" required>
+                <button type="submit">Subir</button>
+            </form>
+
+            <h2>Lista de documentos</h2>
+
+            <table id="docs-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

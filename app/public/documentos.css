@@ -15,11 +15,14 @@ body {
     background: #1e293b;
     color: white;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar .logo {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 22px;
 }
 
 .sidebar ul {
@@ -198,4 +201,161 @@ body {
 .content h2 {
     margin-bottom: 10px;
     color: #1e293b;
+}
+
+/* CONTENEDOR PRINCIPAL TIPO CARD */
+.docs-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* FILTROS */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    transition: 0.2s;
+}
+
+.filters input:focus,
+.filters select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56,189,248,0.2);
+}
+
+/* GESTIÓN DE CARPETAS */
+.folder-manager {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.folder-manager input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    flex: 1;
+}
+
+.folder-manager button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #1e293b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.folder-manager button:hover {
+    background: #334155;
+}
+
+/* BOTONES GENERALES */
+button {
+    transition: 0.2s;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* FORMULARIO */
+#upload-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+/* MEJOR TABLA */
+#docs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+#docs-table thead {
+    background: linear-gradient(90deg, #1e293b, #334155);
+    color: white;
+}
+
+#docs-table th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#docs-table tbody tr {
+    transition: 0.2s;
+}
+
+#docs-table tbody tr:hover {
+    background-color: #f1f5f9;
+    transform: scale(1.01);
+}
+
+/* ICONOS Y ACCIONES */
+#docs-table td a {
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+#docs-table td a:hover {
+    transform: scale(1.2);
+}
+
+/* BOTÓN ELIMINAR */
+#docs-table button {
+    background-color: #ef4444;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+#docs-table button:hover {
+    background-color: #dc2626;
+}
+
+/* TITULOS */
+.content h2 {
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.content h3 {
+    margin: 15px 0;
+    color: #334155;
+}
+
+/* SIDEBAR ACTIVO */
+.sidebar a.active {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* SCROLL */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5f5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
 }

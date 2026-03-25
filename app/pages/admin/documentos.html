@@ -2,13 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentos</title>
 
-    <link rel="stylesheet" href="documentos.css">
-    <script src="documentos.js" defer></script>
+<link rel="stylesheet" href="/admin.css">
+<link rel="stylesheet" href="/documentos.css">
+<script src="/documentos.js" defer></script>
+
+
 </head>
 
 <body class="admin-layout">
+
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
@@ -17,57 +22,83 @@
             <ul>
                 <li><a href="/admin">📅 Calendario</a></li>
                 <li><a href="/documentos">📁 Documentos</a></li>
-                <li><a href="#">👥 Padron</a></li>
+                <li><a href="/padron">👥 Padrón</a></li>
             </ul>
         </nav>
     </aside>
 
+<!-- CONTENIDO PRINCIPAL -->
+<div class="main-content">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h1>Documentos</h1>
+
+        <div class="user-dropdown">
+            <span id="username">Usuario ▾</span>
+
+            <div class="dropdown-menu" id="dropdown">
+                <p id="user-name">Usuario</p>
+                <hr>
+                <button id="logout-btn">Cerrar sesión</button>
+            </div>
+        </div>
+    </header>
+
     <!-- CONTENIDO -->
-    <div class="main-content">
+    <section class="content">
 
-        <header class="navbar">
-            <h1>Documentos</h1>
+        <h2>Gestión de documentos</h2>
 
-            <div class="user-menu">
-    <div class="user-dropdown">
+        <!-- BUSCADOR + FILTRO -->
+        <div class="filters">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Buscar documento..."
+            >
 
-        <span id="username">Usuario ▾</span>
-
-        <div class="dropdown-menu" id="dropdown">
-            <p id="user-name">Usuario</p>
-            <hr>
-            <button id="logout-btn">Cerrar sesión</button>
+            <select id="folder-select">
+                <!-- Se llena dinámicamente -->
+            </select>
         </div>
 
-    </div>
+        <!-- GESTIÓN DE CARPETAS -->
+        <div class="folder-manager">
+            <input 
+                type="text" 
+                id="new-folder-name" 
+                placeholder="Nueva carpeta"
+            >
+            <button id="create-folder-btn">Crear</button>
+            <button id="rename-folder-btn">Renombrar</button>
+            <button id="delete-folder-btn">Eliminar</button>
+        </div>
+
+        <!-- SUBIR ARCHIVO -->
+        <form id="upload-form">
+            <input type="file" id="file-input" required>
+            <button type="submit">Subir archivo</button>
+        </form>
+
+        <!-- TABLA DE DOCUMENTOS -->
+        <table id="docs-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Carpeta</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="docs-body">
+                <!-- JS renderiza aquí -->
+            </tbody>
+        </table>
+
+    </section>
+
 </div>
-        </header>
-
-        <section class="content">
-
-            <h2>Subir documento</h2>
-
-            <form id="upload-form">
-                <input type="file" id="file-input" required>
-                <button type="submit">Subir</button>
-            </form>
-
-            <h2>Lista de documentos</h2>
-
-            <table id="docs-table">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Fecha</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-
-        </section>
-
-    </div>
 
 </body>
 </html>

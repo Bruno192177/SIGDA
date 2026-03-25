@@ -1,3 +1,4 @@
+/* RESET */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,11 +16,14 @@ body {
     background: #1e293b;
     color: white;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar .logo {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 22px;
 }
 
 .sidebar ul {
@@ -34,10 +38,14 @@ body {
 .sidebar a {
     color: white;
     text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 6px;
     transition: 0.3s;
 }
 
 .sidebar a:hover {
+    background: #334155;
     color: #38bdf8;
 }
 
@@ -69,21 +77,20 @@ body {
     font-weight: bold;
 }
 
-/* menú oculto */
+/* DROPDOWN */
 .dropdown-menu {
     position: absolute;
-    top: 35px;
+    top: 40px;
     right: 0;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     padding: 10px;
     width: 200px;
     display: none;
-    z-index: 100;
+    z-index: 2000;
 }
 
-/* mostrar */
 .dropdown-menu.active {
     display: block;
 }
@@ -97,7 +104,6 @@ body {
     margin: 10px 0;
 }
 
-/* botón logout dentro */
 .dropdown-menu button {
     width: 100%;
     background: none;
@@ -106,6 +112,7 @@ body {
     text-align: left;
     padding: 8px;
     cursor: pointer;
+    border-radius: 6px;
 }
 
 .dropdown-menu button:hover {
@@ -121,7 +128,7 @@ body {
 /* CALENDARIO */
 #calendar {
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px; 
     margin: 20px auto;
     padding: 20px;
     background: white;
@@ -129,4 +136,91 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* ===== MODAL ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
+    background: rgba(0, 0, 0, 0.6);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+/* ocultar */
+.hidden {
+    display: none;
+}
+
+/* contenido modal */
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 0.2s ease;
+}
+
+/* animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* inputs */
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* botones */
+.modal-content button {
+    margin-top: 8px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* botones individuales */
+#save-event {
+    background: #1e293b;
+    color: white;
+}
+
+#save-event:hover {
+    background: #0f172a;
+}
+
+#delete-event {
+    background: #ef4444;
+    color: white;
+}
+
+#delete-event:hover {
+    background: #dc2626;
+}
+
+#close-modal { 
+    background: #e5e7eb;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil de empleado</title>
+
+    <link rel="stylesheet" href="/admin.css">
+    <link rel="stylesheet" href="/empleado.css">
+
+    <script src="/empleado.js" defer></script>
+</head>
+
+<body class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">SIGDA</h2>
+        <nav>
+            <ul>
+                <li><a href="/admin">📅 Calendario</a></li>
+                <li><a href="/documentos">📁 Documentos</a></li>
+                <li><a href="/padron" class="active">👥 Padrón</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <div class="main-content">
+
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <h1 id="employee-title">Empleado</h1>
+
+            <div class="user-dropdown">
+                <span id="username">Usuario ▾</span>
+
+                <div class="dropdown-menu" id="dropdown">
+                    <p id="user-name">Usuario</p>
+                    <hr>
+                    <button id="logout-btn">Cerrar sesión</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENIDO -->
+        <section class="content">
+
+            <!-- INFO EMPLEADO -->
+            <div class="employee-info">
+                <h2 id="employee-name">Nombre</h2>
+                <p id="employee-status" class="status">Estado</p>
+            </div>
+
+            <!-- SUBIR DOCUMENTO -->
+            <div class="docs-card">
+
+                <h3>Subir documento</h3>
+
+                <form id="upload-form">
+                    <input type="file" id="file-input" required>
+                    <button type="submit">Subir</button>
+                </form>
+
+                <!-- LISTA -->
+                <h3>Documentos del empleado</h3>
+
+                <table id="docs-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Fecha</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="docs-body"></tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

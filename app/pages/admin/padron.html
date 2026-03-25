@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Padrón</title>
+
+    <link rel="stylesheet" href="/admin.css">
+    <link rel="stylesheet" href="/padron.css">
+
+    <script src="/padron.js" defer></script>
+</head>
+
+<body class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">SIGDA</h2>
+        <nav>
+            <ul>
+                <li><a href="/admin">📅 Calendario</a></li>
+                <li><a href="/documentos">📁 Documentos</a></li>
+                <li><a href="/padron" class="active">👥 Padrón</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <div class="main-content">
+
+        <!-- NAVBAR -->
+    <header class="navbar">
+        <h1>Padrón</h1>
+
+        <div class="user-dropdown">
+            <span id="username">Usuario ▾</span>
+
+            <div class="dropdown-menu" id="dropdown">
+                <p id="user-name">Usuario</p>
+                <hr>
+                <button id="logout-btn">Cerrar sesión</button>
+            </div>
+        </div>
+    </header>
+
+        <!-- CONTENIDO -->
+        <section class="content">
+
+            <!-- HEADER -->
+            <div class="padron-header">
+                <h2>Empleados</h2>
+                <button id="add-employee-btn">+ Nuevo empleado</button>
+            </div>
+
+            <!-- GRID DE TARJETAS -->
+            <div id="employee-grid" class="employee-grid">
+                <!-- JS renderiza tarjetas -->
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="employee-modal" class="modal hidden">
+        <div class="modal-content">
+
+            <h3>Nuevo empleado</h3>
+
+            <input type="text" id="employee-name" placeholder="Nombre">
+
+            <select id="employee-status">
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+                <option value="suspendido">Suspendido</option>
+            </select>
+
+            <button id="save-employee">Guardar</button>
+            <button id="close-modal">Cancelar</button>
+
+        </div>
+    </div>
+
+</body>
+</html>

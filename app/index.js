@@ -206,7 +206,13 @@ const storage = multer.diskStorage({
         cb(null, __dirname + "/public/uploads");
     },
     filename: (req, file, cb) => {
-        cb(null, Date.now() + "-" + file.originalname);
+        
+        // se corrige los caracteres especiales
+        const nombreCorregido = Buffer
+            .from(file.originalname, 'latin1')
+            .toString('utf8');
+
+        cb(null, Date.now() + "-" + nombreCorregido);
     }
 });
 
@@ -216,7 +222,9 @@ const upload = multer({ storage });
 app.post("/api/documentos", authorization.soloAdmin, upload.single("archivo"), async (req, res) => {
     const db = await conectarDB();
 
-    const nombre = req.file.originalname;
+    const nombre = Buffer
+        .from(req.file.originalname, 'latin1')
+        .toString('utf8');
     const ruta = "/uploads/" + req.file.filename;
     const fecha = new Date().toISOString();
     const carpeta_id = req.body.carpeta || null;

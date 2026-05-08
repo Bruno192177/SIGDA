@@ -56,7 +56,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (calendarEl) {
         calendar = new FullCalendar.Calendar(calendarEl, {
 
-            locale: 'es',                         // <--- CAMBIO REALIZADO AQUÍ
+            locale: 'es',
+            
+            buttonText: {
+                today: 'Hoy',
+                month: 'Mes',
+                week: 'Semana',
+                day: 'Día',
+                list: 'Lista'
+            },
+            
             initialView: 'timeGridWeek', 
             editable: true,
             events: '/api/events',

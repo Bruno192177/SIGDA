@@ -13,7 +13,7 @@ body {
 /* SIDEBAR */
 .sidebar {
     width: 220px;
-    background: #1e293b;
+    background: #000000;  /* cambiado a negro */
     color: white;
     padding: 20px;
     display: flex;
@@ -223,4 +223,28 @@ body {
 
 #close-modal { 
     background: #e5e7eb;
+}
+
+/* ===== BOTONES DEL CALENDARIO (FullCalendar) ===== */
+/* Color negro a todos los botones de la barra de navegación */
+.fc-button {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.fc-button:hover {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+}
+
+/* Botón activo (ej. "Hoy") */
+.fc-button-active {
+    background-color: #111111 !important;
+    border-color: #111111 !important;
+}
+
+/* Quita sombras azules que agrega FullCalendar */
+.fc-button:focus {
+    box-shadow: none !important;
 }
